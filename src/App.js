@@ -10,16 +10,19 @@ import EditUser from './components/EditUser';
 
 function App() {
   return (
-    <div className='App'>
-      <h5>React CRUD usando API and MySQL</h5>
+    <div className='App container'>
+      <h5 className='mt-2 text-center'>React CRUD usando API and MySQL</h5>
         <BrowserRouter>
-          <nav>
+          <nav className='row text-center'>
             <ul>
               <li>
                 <Link to="/">List Users</Link>
               </li>
               <li>
                 <Link to="user/create">Create User</Link>
+              </li>
+              <li>
+                <Link to="user/:id/edit">Edit User</Link>
               </li>
             </ul>
           </nav>

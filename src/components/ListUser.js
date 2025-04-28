@@ -1,5 +1,9 @@
+import { useState } from "react";
+import axios from "axios";
 export default function ListUser() {
     return (
-        <h1>List Users</h1>
+        <div>
+            <h1 className="mb-3">List Users</h1>
+        </div>
     )
 }
