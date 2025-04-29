@@ -8,7 +8,7 @@ export default function CreateUser() {
         event.preventDefault();
         console.log(inputs)
 
-        axios.post('http://localhost:80/projetotcc/api')
+        axios.post('http://localhost/projetotcc/projetotcc/api/user/save', inputs)
     }
     const handleChange = (event) => {
         const name = event.target.name;
@@ -21,7 +21,7 @@ export default function CreateUser() {
     return (
         <div>
             <h1 className="mb-3">Create Users</h1>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit} method="post">
                 <label className="form-label" for="name">Nome: </label>
                 <input 
                     className="form-control" 
@@ -48,7 +48,7 @@ export default function CreateUser() {
                     onChange={handleChange} 
                     maxLength="11"
                     />
-                <button type="submit" className="btn btn-success mt-3">Enviar</button>
+                <button className="btn btn-success mt-3">Enviar</button>
             </form>
         </div>
     )
