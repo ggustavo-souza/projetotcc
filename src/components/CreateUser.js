@@ -8,7 +8,7 @@ export default function CreateUser() {
         event.preventDefault();
         console.log(inputs)
 
-        axios.post('http://localhost/projetotcc/projetotcc/api/user/save', inputs)
+        axios.post('http://localhost/projetotcc/api/user/save', inputs)
     }
     const handleChange = (event) => {
         const name = event.target.name;
