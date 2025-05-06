@@ -1,14 +1,18 @@
 import { useState } from "react";
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
 export default function CreateUser() {
-    
+    const navigate = useNavigate();
     const [inputs, setInputs] = useState({})
 
     const handleSubmit = (event) => {
         event.preventDefault();
         console.log(inputs)
 
-        axios.post('http://localhost/projetotcc/api/user/save', inputs)
+        axios.post('http://localhost/projetotcc/api/user/save', inputs.then(function(response){
+            console.log(response.data);
+            navigate('/');
+        }))
     }
     const handleChange = (event) => {
         const name = event.target.name;
