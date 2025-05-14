@@ -16,20 +16,17 @@ function App() {
           <nav className='row text-center'>
             <ul>
               <li>
-                <Link to="/">List Users</Link>
+                <Link to="/" className="btn btn-outline-success">List Users</Link>
               </li>
               <li>
-                <Link to="user/create">Create User</Link>
-              </li>
-              <li>
-                <Link to="user/:id/edit">Edit User</Link>
+                <Link to="user/create" className="btn btn-outline-success">Create User</Link>
               </li>
             </ul>
           </nav>
           <Routes>
             <Route index element={<ListUser />} />
             <Route path='user/create' element={<CreateUser />} />
-            <Route path='user/:id/edit' element={<EditUser />} />
+            <Route path='user/id/edit' element={<EditUser />} />
           </Routes>
         </BrowserRouter>
     </div>
